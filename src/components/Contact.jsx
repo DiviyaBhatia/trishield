@@ -52,7 +52,7 @@ const Contact = () => {
           {/* Left Column - Brand */}
           <div>
             <div className="mb-6">
-            <img src='/tststs@2x.png' className='w-82 h-fit'/>
+            <img src='/tslogo.svg' className='w-82 h-fit'/>
 
             </div>
             <p className="text-gray-600 mb-6 max-w-md">

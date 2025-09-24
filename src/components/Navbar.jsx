@@ -22,7 +22,7 @@ const Navbar = () => {
     >
       <div className="flex items-center justify-between">
         {/* Logo */}
-        <img src='/tststs@2x.png' className='w-50 h-fit'/>
+        <img src='/tslogo.svg' className='w-50 h-fit'/>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-8">
