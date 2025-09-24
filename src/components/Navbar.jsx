@@ -16,13 +16,13 @@ const Navbar = () => {
     <nav
       className={`fixed top-4 left-1/2 transform -translate-x-1/2 w-11/12 md:w-4/5 transition-all duration-300
         ${scrolled 
-          ? 'bg-white/95 backdrop-blur-lg rounded-full shadow-lg py-4 px-6 z-[9999]' 
-          : 'bg-white py-4 px-4 z-[9999]'
+          ? 'bg-white/95 backdrop-blur-lg rounded-full shadow-lg py-1 px-6 z-[9999]' 
+          : 'bg-white py-1 px-4 z-[9999]'
         }`}
     >
       <div className="flex items-center justify-between">
         {/* Logo */}
-        <img src='/tslogo.svg' className='w-50 h-fit'/>
+        <img src='/tslogo.svg' className='w-20 h-fit'/>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-8">
