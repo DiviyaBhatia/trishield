@@ -23,7 +23,7 @@ const Contact = () => {
             your mind
           </h2>
 
-          <p className="text-lg text-gray-500  mb-12 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-500 mb-12 max-w-2xl mx-auto">
             Sign up today and see the difference Active can make for your business.
           </p>
 
@@ -46,45 +46,41 @@ const Contact = () => {
         </div>
       </div>
 
-      {/* Footer Section can go here */}
+      {/* Footer Section */}
       <div className="px-8">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-start">
           {/* Left Column - Brand */}
-          <div>
-            <div className="mb-6">
-            <img src='/tslogo.svg' className='w-82 h-fit'/>
-
-            </div>
-            <p className="text-gray-600 mb-6 max-w-md">
+          <div className="flex flex-col justify-start space-y-4">
+            <img src='/tslogo.svg' className='w-32 h-auto'/>
+            <p className="text-gray-600 max-w-md">
               Streamline workflows and grow your business with effective lead management.
             </p>
             <p className="text-gray-500">
               hello.active@gmail.com
             </p>
           </div>
-          
+
           {/* Right Column - Navigation */}
-          <div className="md:text-right">
-            <h4 className="text-lg font-semibold text-gray-900 mb-6">Pages</h4>
-            <nav className="space-y-4">
+          <div className="md:text-right flex flex-col justify-start space-y-4">
+            <h4 className="text-lg font-semibold text-gray-900 mb-4">Pages</h4>
+            <nav className="space-y-2">
               <a href="/" className="block text-gray-600 hover:text-gray-900 transition-colors">
                 Homepage
               </a>
               <a href="/contact" className="block text-gray-600 hover:text-gray-900 transition-colors">
                 Contact
               </a>
-             
               <a href="/terms" className="block text-gray-600 hover:text-gray-900 transition-colors">
                 Terms & Conditions
               </a>
             </nav>
           </div>
         </div>
-        
+
         {/* Copyright */}
         <div className="max-w-6xl mx-auto mt-16 pt-8 border-t border-gray-200">
           <div className="text-right">
-            <p className="text-sm text-gray-500 border-2 border-dashed border-blue-300 inline-block px-3 py-2 rounded">
+            <p className="text-sm text-gray-500 inline-block">
               © trishield2025. All right reserved.
             </p>
           </div>
