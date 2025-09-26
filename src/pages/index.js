@@ -1,4 +1,5 @@
 "use client";
+import AboutPage from '@/components/AboutPage';
 import CaseStudies from '@/components/CaseStudies';
 import Contact from '@/components/Contact';
 import Hero from '@/components/Hero';
@@ -25,12 +26,16 @@ export default function HomePage() {
       }}
     > 
       <div className="absolute inset-0 bg-white opacity-60"></div>
-      <div className="relative pt-24  z-10">
+      
+      <div className="relative pt-24 z-10">
         <Hero />
       </div>
     </div>
 
     {/* Other Sections */}
+    <div id="about" >
+      <AboutPage />
+    </div>
     <div id="services">
       <Services />
     </div>

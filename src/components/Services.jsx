@@ -24,7 +24,7 @@ const Services = () => {
           <h3 className="text-[24px] font-semibold text-gray-900 mb-4">
           Managed Services 
           </h3>
-          <p className="text-gray-600 text-[16  px] leading-relaxed">
+          <p className="text-gray-600 text-[16px] leading-relaxed">
           SIEM, offshore support, and infrastructure management that keeps your systems secure, monitored, and running smoothly.
           </p>
         </div>
