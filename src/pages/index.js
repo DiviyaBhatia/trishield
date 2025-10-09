@@ -19,7 +19,7 @@ export default function HomePage() {
     <div 
       className="relative min-h-screen w-full"
       style={{
-        backgroundImage: 'url("/bg.png")',
+        backgroundImage: 'url("/bg3.png")',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'

@@ -9,28 +9,28 @@ const AboutPage = () => {
       title: "About Company",
       content:
         "TriShield Systems, founded in 2021, was built to address one of the toughest challenges MSPs face—delivering reliable, 24x7 operations. With a proven track record in building NOC/SOC teams, helpdesk support, and managing enterprise infrastructure, we enable businesses to scale while maintaining quality. We’ve successfully partnered with global enterprises, functioning as an extension of their in-house teams and helping them grow revenue while strengthening operations.",
-      image: "/api/placeholder/600/400",
+      image: "/about.png",
     },
     values: {
       id: "our-values",
       title: "Our Values",
       content:
         "At TriShield, our values shape everything we do. We put people first, recognizing that our team is our greatest strength. We uphold integrity by staying honest, transparent, and accountable in every interaction. Our focus on excellence drives us to consistently deliver high-quality services, while our one team approach ensures we work seamlessly as an extension of your organization rather than just another vendor.",
-      image: "/api/placeholder/600/400",
+      image: "/values.png",
     },
     mission: {
       id: "our-mission",
       title: "Our Mission",
       content:
         "Our mission is to empower businesses with reliable, people-driven solutions that deliver round-the-clock excellence. We aim to bridge operational gaps with expertise in cloud, security, and infrastructure management while ensuring customer-centricity remains at the core of every engagement.",
-      image: "/api/placeholder/600/400",
+      image: "/bg2.png",
     },
     policies: {
       id: "our-policies",
       title: "Our Policies",
       content:
         "We believe in complete transparency, accountability, and ethical conduct. From data privacy and compliance to service quality and confidentiality, our policies are designed to protect our clients while ensuring operational excellence.",
-      image: "/api/placeholder/600/400",
+      image: "/policies.png",
     },
   };
 
