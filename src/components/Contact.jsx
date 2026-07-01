@@ -1,10 +1,6 @@
 import { useState } from 'react';
 
-const Contact = () => {
-  const [email, setEmail] = useState('');
-
-  const handleSubmit = () => console.log('Email submitted:', email);
-
+const Contact = ({ onContactClick }) => {
   return (
     <div>
       {/* Hero Section with Background Image */}
@@ -13,7 +9,7 @@ const Contact = () => {
         style={{ backgroundImage: 'url("/contacbg.png")' }}
       >
         {/* Optional overlay if you want to dim the background */}
-        <div className="absolute inset-0 "></div>
+        <div className="absolute inset-0"></div>
 
         <div className="relative z-10 text-center max-w-4xl mx-auto">
           <p className="text-sm text-gray-100 mb-4 uppercase tracking-wide">Contact Us</p>
@@ -24,25 +20,15 @@ const Contact = () => {
           </h2>
 
           <p className="text-lg text-gray-500 mb-12 max-w-2xl mx-auto">
-            Sign up today and see the difference Active can make for your business.
+            Get in touch with our expert team and find out how we can help protect and scale your business.
           </p>
 
-          {/* Email Form */}
-          <div className="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
-            <input
-              type="email"
-              placeholder="Your Email Address"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="flex-1 px-6 py-4 bg-white/90 backdrop-blur-sm border border-white/20 rounded-xl placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-400"
-            />
-            <button
-              onClick={handleSubmit}
-              className="px-8 py-4 bg-gray-900 text-white rounded-xl hover:bg-gray-800 transition-colors font-medium whitespace-nowrap"
-            >
-              Get Started
-            </button>
-          </div>
+          <button
+            onClick={onContactClick}
+            className="px-8 py-4 bg-[#f15a27] text-white rounded-xl hover:bg-[#dc4512] transition-colors font-bold shadow-lg"
+          >
+            Get in Touch
+          </button>
         </div>
       </div>
 

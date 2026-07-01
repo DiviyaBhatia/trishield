@@ -42,8 +42,8 @@
         return (
           <div className="container mx-auto p-8 grid lg:grid-cols-2 gap-12 ">
             <div className="flex flex-col justify-center">
-              <p className="text-sm text-gray-600 mb-4 uppercase tracking-wide">Testimonials</p>
-              <h2 className="text-5xl font-bold mb-6"><span className="text-[#1d77ba]">Trusted</span> by satisfied clients</h2>
+              <p className="text-sm text-gray-600 mb-4 uppercase tracking-wide">OUR WORK</p>
+              <h2 className="text-5xl font-bold mb-6"><span className="text-[#1d77ba]">Our Work</span> speaks for itself</h2>
             </div>
             <div className="relative">
               <div className="h-96 lg:h-[600px] overflow-y-auto pr-4 space-y-6">
