@@ -14,9 +14,8 @@ const Contact = ({ onContactClick }) => {
         <div className="relative z-10 text-center max-w-4xl mx-auto">
           <p className="text-sm text-gray-100 mb-4 uppercase tracking-wide">Contact Us</p>
 
-          <h2 className="text-5xl md:text-6xl font-bold text-black mb-6 leading-tight">
-            Ask whatever you have in<br />
-            your mind
+          <h2 className="text-5xl md:text-6xl font-bold text-black mb-6 leading-tight font-poppins tracking-tight">
+            How We Can Help You
           </h2>
 
           <p className="text-lg text-gray-500 mb-12 max-w-2xl mx-auto">
@@ -36,11 +35,18 @@ const Contact = ({ onContactClick }) => {
       <div className="px-8">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-start">
           {/* Left Column - Brand */}
-          <div className="flex flex-col justify-start space-y-4">
-            <img src='/tslogo.svg' className='w-32 h-auto'/>
-            <p className="text-gray-600 max-w-md">
-              Streamline workflows and grow your business with effective lead management.
-            </p>
+          <div className="flex flex-col justify-start space-y-6">
+            <img src='/tslogo.svg' className='w-32 h-auto' alt="Trishield Brand Logo" />
+            <div className="flex flex-col space-y-2">
+              <div className="flex gap-5 text-sm font-black tracking-[0.2em] text-[#1d77ba]">
+                <span>AVAILABLE</span>
+                <span>AGILE</span>
+                <span>AHEAD</span>
+              </div>
+              <p className="text-xs font-bold tracking-wider text-gray-700 uppercase mt-1">
+                YOUR TRUSTED IT PARTNER FOR YOUR BUSINESS
+              </p>
+            </div>
             <p className="text-gray-500">
               hello.active@gmail.com
             </p>
@@ -48,7 +54,7 @@ const Contact = ({ onContactClick }) => {
 
           {/* Right Column - Navigation */}
           <div className="md:text-right flex flex-col justify-start space-y-4">
-            <h4 className="text-lg font-semibold text-gray-900 mb-4">Pages</h4>
+            <h4 className="text-lg font-bold text-gray-900 mb-4 font-poppins">Pages</h4>
             <nav className="space-y-2">
               <a href="/" className="block text-gray-600 hover:text-gray-900 transition-colors">
                 Homepage

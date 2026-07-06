@@ -43,7 +43,7 @@
           <div className="container mx-auto p-8 grid lg:grid-cols-2 gap-12 ">
             <div className="flex flex-col justify-center">
               <p className="text-sm text-gray-600 mb-4 uppercase tracking-wide">OUR WORK</p>
-              <h2 className="text-5xl font-bold mb-6"><span className="text-[#1d77ba]">Our Work</span> speaks for itself</h2>
+              <h2 className="text-5xl font-bold mb-6 font-poppins tracking-tight"><span className="text-[#1d77ba]">Our Work</span> speaks for itself</h2>
             </div>
             <div className="relative">
               <div className="h-96 lg:h-[600px] overflow-y-auto pr-4 space-y-6">
@@ -57,7 +57,7 @@
                     <div className="flex items-start space-x-4">
                       <div className="flex-shrink-0 w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center text-xl">{t.icon}</div>
                       <div>
-                        <h3 className="font-bold text-gray-900 text-lg mb-2">{t.title}</h3>
+                        <h3 className="font-bold text-gray-900 text-lg mb-2 font-poppins">{t.title}</h3>
                         <p className="text-gray-600">{t.description}</p>
                       </div>
                     </div>

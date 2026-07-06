@@ -19,8 +19,8 @@ const Why = () => {
       <p className="inline-block px-4 py-2 border border-gray-300 rounded-full text-sm text-gray-500 uppercase tracking-wide bg-transparent">
         Why Trishield
       </p>
-      <h2 className="text-[56px] md:text-6xl font-semibold leading-tight mb-16 mt-4">
-        Why Partner <span className="text-[#1d77ba] font-thin">With Us?</span>
+      <h2 className="text-[56px] md:text-6xl font-bold leading-tight mb-16 mt-4 font-poppins tracking-tight">
+        Why Partner <span className="text-[#1d77ba] font-normal">With Us?</span>
       </h2>
 
       <div className="grid md:grid-cols-3 gap-8 max-w-6xl w-full">
@@ -31,7 +31,7 @@ const Why = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
             </div>
-            <h3 className="text-xl font-bold text-gray-900 mb-4">{adv.title}</h3>
+            <h3 className="text-xl font-bold text-gray-900 mb-4 font-poppins">{adv.title}</h3>
             <p className="text-gray-600 text-sm leading-relaxed">{adv.desc}</p>
           </div>
         ))}

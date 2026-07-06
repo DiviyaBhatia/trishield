@@ -7,7 +7,7 @@ import ContactModal from '@/components/ContactModal';
 import Hero from '@/components/Hero';
 import Navbar from '@/components/Navbar';
 import Services from '@/components/Services';
-import Testimonials from '@/components/Testimonials';
+import TrishieldEdge from '@/components/TrishieldEdge';
 
 
 // Main Homepage Component
@@ -15,7 +15,7 @@ export default function HomePage() {
   const [isContactOpen, setIsContactOpen] = useState(false);
 
   return (
-    <div className="overflow-x-hidden bg-white text-black">
+    <div className="overflow-x-clip bg-white text-black">
     {/* Navbar at the very top, outside hero */}
     <Navbar onContactClick={() => setIsContactOpen(true)} />
 
@@ -44,8 +44,8 @@ export default function HomePage() {
       <Services />
     </div>
     
-    <div id="testimonials" className="bg-gray-50">
-      <Testimonials />
+    <div id="trishield-edge" className="bg-gray-50/30">
+      <TrishieldEdge />
     </div>
     
     <div id="blog">

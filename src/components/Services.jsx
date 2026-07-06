@@ -1,21 +1,13 @@
 "use client";
-import { useRef, useState } from 'react';
 
 const Services = () => {
-  const scrollRef = useRef(null);
-  const [activePage, setActivePage] = useState(0);
-
   const servicesData = [
     {
-      category: "CATEGORY 01",
       title: "Managed Services",
-      desc: "Our Managed Services practice takes on the day-to-day operational burden of your IT environment so your team can focus on strategic priorities. We combine skilled engineers with purpose-built tooling to deliver consistent, measurable outcomes.",
-      highlights: ["Managed NOC", "Network Security Management", "Virtual Infrastructure", "System Administration", "Multi-Cloud Management"],
+      desc: "Our Managed Services practice takes on the day-to-day operational burden of your IT environment, featuring Unified Endpoint Management (UEM) so your team can focus on strategic priorities. We combine skilled engineers with purpose-built tooling to deliver consistent, measurable outcomes.",
+      highlights: ["Unified Endpoint Management (UEM)", "Managed NOC", "Network Security Management", "Virtual Infrastructure", "System Administration", "Multi-Cloud Management"],
       colorClass: {
-        bg: "bg-[#F3F3F1]",
-        border: "border-transparent",
-        text: "text-[#1d77ba]",
-        badgeBg: "bg-blue-100/70 text-[#1d77ba]"
+        bg: "bg-[#F3F3F1]"
       },
       icon: (
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -24,15 +16,11 @@ const Services = () => {
       )
     },
     {
-      category: "CATEGORY 02",
       title: "Professional Services",
       desc: "Our Professional Services team delivers hands-on expertise for your infrastructure projects — whether on-site or remote. From new technology deployments to ongoing support, we bring the skills and experience to get the job done right.",
       highlights: ["Data Centre Support", "Wifi Installations", "Hardware Refresh", "Remote Support"],
       colorClass: {
-        bg: "bg-[#F3F3F1]",
-        border: "border-transparent",
-        text: "text-[#1d77ba]",
-        badgeBg: "bg-blue-100/70 text-[#1d77ba]"
+        bg: "bg-[#EAEAEA]"
       },
       icon: (
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -41,49 +29,11 @@ const Services = () => {
       )
     },
     {
-      category: "CATEGORY 03",
-      title: "Security Services",
-      desc: "Cyber threats are growing in scale and sophistication. Our Security Services provide the people, processes, and technology to protect your organisation — from real-time threat detection and response to vulnerability management.",
-      highlights: ["Managed SOC", "Vulnerability Management", "PIM / PAM"],
-      colorClass: {
-        bg: "bg-[#F3F3F1]",
-        border: "border-transparent",
-        text: "text-[#1d77ba]",
-        badgeBg: "bg-blue-100/70 text-[#1d77ba]"
-      },
-      icon: (
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-        </svg>
-      )
-    },
-    {
-      category: "CATEGORY 04",
-      title: "Staff Augmentation",
-      desc: "When you need specialised skills quickly — without the overhead of permanent hiring — our Staff Augmentation service delivers vetted, experienced professionals who integrate seamlessly into your team.",
-      highlights: ["Network & Systems", "Cybersecurity Specialists", "DevOps Engineers"],
-      colorClass: {
-        bg: "bg-[#F3F3F1]",
-        border: "border-transparent",
-        text: "text-[#1d77ba]",
-        badgeBg: "bg-blue-100/70 text-[#1d77ba]"
-      },
-      icon: (
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
-        </svg>
-      )
-    },
-    {
-      category: "CATEGORY 05",
       title: "Value Added Reseller Services",
       desc: "As a trusted technology reseller, we go beyond simply supplying equipment. We combine deep vendor relationships, procurement expertise, and lifecycle knowledge to ensure you get the right technology at the right price.",
       highlights: ["Data Centre Hardware", "Enterprise Infrastructure", "EOL / EOS Hardware"],
       colorClass: {
-        bg: "bg-[#F3F3F1]",
-        border: "border-transparent",
-        text: "text-[#1d77ba]",
-        badgeBg: "bg-blue-100/70 text-[#1d77ba]"
+        bg: "bg-[#F3F3F1]"
       },
       icon: (
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -92,15 +42,37 @@ const Services = () => {
       )
     },
     {
-      category: "CATEGORY 06",
-      title: "DevOps Services",
-      desc: "Our DevOps Services practice helps organisations modernise their operations through automation, AI-powered tooling, and cloud-native design. We build solutions that reduce manual effort and accelerate delivery.",
-      highlights: ["AI-Driven Managed Services", "School Systems Design", "Cloud Assessments"],
+      title: "Staff Augmentation",
+      desc: "When you need specialised skills quickly — without the overhead of permanent hiring — our Staff Augmentation service delivers vetted, experienced professionals who integrate seamlessly into your team.",
+      highlights: ["Network & Systems", "Cybersecurity Specialists", "DevOps Engineers"],
       colorClass: {
-        bg: "bg-[#F3F3F1]",
-        border: "border-transparent",
-        text: "text-[#1d77ba]",
-        badgeBg: "bg-blue-100/70 text-[#1d77ba]"
+        bg: "bg-[#EAEAEA]"
+      },
+      icon: (
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
+        </svg>
+      )
+    },
+    {
+      title: "Managed PIM / PAM",
+      desc: "Secure and manage privileged credentials, session monitoring, and access controls to prevent credential abuse and insider threats. Our team delivers comprehensive Privileged Identity & Access Management (PIM/PAM) solutions.",
+      highlights: ["Privileged Identity Management", "Session Monitoring & Recording", "Credential Vaulting", "Just-In-Time Access"],
+      colorClass: {
+        bg: "bg-[#F3F3F1]"
+      },
+      icon: (
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+        </svg>
+      )
+    },
+    {
+      title: "AI-Driven IT Operations",
+      desc: "Leverage artificial intelligence and machine learning to automate system monitoring, predict anomalies, and streamline IT workflows. We transform traditional DevOps into intelligent AIOps for resilient, self-healing systems.",
+      highlights: ["AIOps & Automation", "Predictive Analytics", "Continuous Delivery", "Intelligent Monitoring"],
+      colorClass: {
+        bg: "bg-[#EAEAEA]"
       },
       icon: (
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -110,137 +82,64 @@ const Services = () => {
     }
   ];
 
-  const scrollLeft = () => {
-    if (scrollRef.current) {
-      const containerWidth = scrollRef.current.offsetWidth;
-      scrollRef.current.scrollBy({ left: -containerWidth, behavior: 'smooth' });
-    }
-  };
-
-  const scrollRight = () => {
-    if (scrollRef.current) {
-      const containerWidth = scrollRef.current.offsetWidth;
-      scrollRef.current.scrollBy({ left: containerWidth, behavior: 'smooth' });
-    }
-  };
-
-  const scrollToPage = (pageIndex) => {
-    if (scrollRef.current) {
-      const containerWidth = scrollRef.current.offsetWidth;
-      scrollRef.current.scrollTo({ left: pageIndex * containerWidth, behavior: 'smooth' });
-      setActivePage(pageIndex);
-    }
-  };
-
-  const handleScroll = () => {
-    if (scrollRef.current) {
-      const { scrollLeft, offsetWidth } = scrollRef.current;
-      const pageIndex = Math.round(scrollLeft / offsetWidth);
-      setActivePage(pageIndex);
-    }
-  };
-
   return (
-    <div className="container mx-auto flex flex-col items-center justify-center p-8 text-center py-20">
-      <p className="inline-block px-4 py-2 border border-gray-300 rounded-full text-sm text-gray-500 uppercase tracking-wide bg-transparent">
-        WHAT WE DO
-      </p>
+    <div className="bg-white text-black w-full py-20 px-8">
+      <div className="max-w-7xl mx-auto">
+        <div className="w-full text-center mb-6">
+          <p className="inline-block px-4 py-2 border border-gray-300 rounded-full text-sm text-gray-500 uppercase tracking-wide bg-transparent font-poppins">
+            WHAT WE DO
+          </p>
+        </div>
+        <h2 className="text-[56px] md:text-6xl font-bold leading-tight mb-20 mt-4 font-poppins tracking-tight max-w-4xl mx-auto text-center text-gray-900">
+          Explore Our Comprehensive Range of{' '}
+          <span className="text-[#1d77ba] font-normal">Innovative Services</span>{' '}
+          Tailored for You
+        </h2>
 
-      <h2 className="text-[56px] md:text-6xl font-semibold leading-tight mb-16 mt-4">
-        Explore Our Comprehensive Range of{' '}
-        <span className="text-[#1d77ba] font-thin">Innovative Services</span>{' '}
-        Tailored for You
-      </h2>
-
-      {/* Grid Wrapper with Carousel Navigation */}
-      <div className="relative w-full max-w-6xl px-4 md:px-12 flex flex-col items-center">
-        
-        {/* Hide scrollbar utility styles */}
-        <style jsx>{`
-          .no-scrollbar::-webkit-scrollbar {
-            display: none;
-          }
-          .no-scrollbar {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-          }
-        `}</style>
-
-        {/* Left Arrow Button */}
-        <button 
-          onClick={scrollLeft}
-          aria-label="Scroll left"
-          className="absolute left-[-10px] md:left-[-25px] top-1/2 transform -translate-y-1/2 w-12 h-12 rounded-full bg-white shadow-lg border border-gray-100 flex items-center justify-center text-gray-600 hover:bg-[#1d77ba] hover:text-white transition-colors duration-300 z-10"
-        >
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-          </svg>
-        </button>
-
-        {/* Right Arrow Button */}
-        <button 
-          onClick={scrollRight}
-          aria-label="Scroll right"
-          className="absolute right-[-10px] md:right-[-25px] top-1/2 transform -translate-y-1/2 w-12 h-12 rounded-full bg-white shadow-lg border border-gray-100 flex items-center justify-center text-gray-600 hover:bg-[#1d77ba] hover:text-white transition-colors duration-300 z-10"
-        >
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-          </svg>
-        </button>
-
-        {/* Scrollable Row */}
-        <div 
-          ref={scrollRef}
-          onScroll={handleScroll}
-          className="flex overflow-x-auto snap-x snap-mandatory scroll-smooth gap-8 w-full no-scrollbar pb-4"
-        >
+        {/* Sticky Card Stacking Container (folding fan effect) */}
+        <div className="relative w-full flex flex-col gap-12">
           {servicesData.map((service, index) => (
-            <div 
-              key={index} 
-              className={`rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 text-left flex flex-col justify-between min-h-[460px] w-full md:w-[calc(33.333%-1.33rem)] flex-shrink-0 snap-start ${service.colorClass.bg}`}
+            <div
+              key={index}
+              className={`sticky top-[100px] w-full rounded-3xl p-8 md:p-12 shadow-[0_-12px_30px_-5px_rgba(0,0,0,0.06),0_15px_15px_-5px_rgba(0,0,0,0.02)] border border-gray-200/50 flex flex-col md:flex-row gap-8 items-start md:items-center min-h-[400px] transition-all duration-300 ${service.colorClass.bg}`}
+              style={{
+                // Offset top slightly for the stacking fan deck look
+                top: `calc(100px + ${index * 24}px)`,
+              }}
             >
-              <div>
-                <span className={`inline-block px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-4 ${service.colorClass.badgeBg}`}>
-                  {service.category}
+              {/* Left Column: Huge Number */}
+              <div className="md:col-span-4 text-left md:w-1/3 flex-shrink-0">
+                <span className="text-[120px] md:text-[160px] font-extrabold text-gray-900/10 leading-none font-poppins select-none">
+                  {index + 1}
                 </span>
-                <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-white shadow-sm ${service.colorClass.text}`}>
+              </div>
+
+              {/* Right Column: Content */}
+              <div className="flex-1 text-left flex flex-col justify-center">
+                <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-white shadow-sm text-[#1d77ba]">
                   {service.icon}
                 </div>
-                <h3 className="text-[24px] font-bold text-gray-900 mb-3 leading-snug">
+                <h3 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4 font-poppins leading-tight tracking-tight">
                   {service.title}
                 </h3>
-                <p className="text-gray-600 text-[15px] leading-relaxed mb-6">
+                <p className="text-gray-600 text-sm md:text-base leading-relaxed mb-6">
                   {service.desc}
                 </p>
-              </div>
-              
-              {/* Highlights/Sub-services */}
-              <div className="border-t border-gray-200/40 pt-4 mt-auto">
-                <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">Key Solutions</p>
-                <div className="flex flex-wrap gap-1.5">
-                  {service.highlights.map((h, i) => (
-                    <span key={i} className="text-xs bg-white/70 border border-gray-200/50 text-gray-700 px-2.5 py-1 rounded-lg">
-                      {h}
-                    </span>
-                  ))}
+
+                {/* Sub-services highlights */}
+                <div className="border-t border-gray-300/30 pt-4 mt-2">
+                  <p className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-3 font-poppins">Key Solutions</p>
+                  <div className="flex flex-wrap gap-2">
+                    {service.highlights.map((h, i) => (
+                      <span key={i} className="text-xs bg-white border border-gray-200 text-gray-700 px-3 py-1.5 rounded-lg shadow-sm font-medium">
+                        {h}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Carousel indicator dots */}
-        <div className="flex space-x-3 mt-10">
-          <button 
-            onClick={() => scrollToPage(0)}
-            aria-label="Page 1"
-            className={`w-3.5 h-3.5 rounded-full transition-all duration-300 ${activePage === 0 ? 'bg-[#1d77ba] w-7' : 'bg-gray-300 hover:bg-gray-400'}`}
-          />
-          <button 
-            onClick={() => scrollToPage(1)}
-            aria-label="Page 2"
-            className={`w-3.5 h-3.5 rounded-full transition-all duration-300 ${activePage === 1 ? 'bg-[#1d77ba] w-7' : 'bg-gray-300 hover:bg-gray-400'}`}
-          />
         </div>
       </div>
     </div>

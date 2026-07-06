@@ -65,12 +65,50 @@ const AboutPage = () => {
       <div id="active-section" className="px-8 pb-16">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
           <div>
-            <h1 className="text-[56px] lg:text-[72px] font-semibold text-black mb-8 leading-tight">
+            <h1 className="text-[56px] lg:text-[72px] font-bold text-black mb-8 leading-tight font-poppins tracking-tight">
               {sections[activeSection].title}
             </h1>
             <p className="text-gray-600 text-[16px] leading-relaxed">
               {sections[activeSection].content}
             </p>
+
+            {/* Creative Brand Pillars Integration inside About Us content */}
+            {activeSection === "company" && (
+              <div className="mt-8 pt-8 border-t border-gray-100 animate-fadeInUp">
+                <p className="text-xs font-bold text-[#1d77ba] uppercase tracking-wider mb-4 font-poppins">
+                  Our Operating Pillars
+                </p>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                  <div>
+                    <div className="flex items-center gap-2 mb-1.5">
+                      <span className="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+                      <h4 className="text-sm font-bold text-gray-900 tracking-wider font-poppins">AVAILABLE</h4>
+                    </div>
+                    <p className="text-xs text-gray-500 leading-relaxed">
+                      24/7/365 operational continuity and rapid assistance.
+                    </p>
+                  </div>
+                  <div>
+                    <div className="flex items-center gap-2 mb-1.5">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#f15a27]"></span>
+                      <h4 className="text-sm font-bold text-gray-900 tracking-wider font-poppins">AGILE</h4>
+                    </div>
+                    <p className="text-xs text-gray-500 leading-relaxed">
+                      Swift adaptivity and scaled resource allocation.
+                    </p>
+                  </div>
+                  <div>
+                    <div className="flex items-center gap-2 mb-1.5">
+                      <span className="w-1.5 h-1.5 rounded-full bg-green-500"></span>
+                      <h4 className="text-sm font-bold text-gray-900 tracking-wider font-poppins">AHEAD</h4>
+                    </div>
+                    <p className="text-xs text-gray-500 leading-relaxed">
+                      Proactive strategy and modern tool innovation.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
           <div className="lg:order-2">
             <div className="w-full h-96 bg-gray-200 rounded-2xl flex items-center justify-center overflow-hidden">

@@ -33,7 +33,7 @@ const ContactModal = ({ isOpen, onClose }) => {
         <div className="p-6 md:p-8 border-b border-gray-100 flex items-center justify-between">
           <div>
             <p className="text-xs text-[#1d77ba] font-bold uppercase tracking-wider mb-1">Contact Us</p>
-            <h3 className="text-2xl font-bold text-gray-900">Get in Touch</h3>
+            <h3 className="text-2xl font-bold text-gray-900">How We Can Help You</h3>
           </div>
           <button 
             onClick={onClose}
