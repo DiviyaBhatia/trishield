@@ -7,26 +7,13 @@ const Navbar = ({ setActiveSection, onContactClick }) => {
   const [aboutOpen, setAboutOpen] = useState(false);
 
   useEffect(() => {
-    const aboutSection = document.getElementById("about");
-    if (!aboutSection) {
-      const handleScroll = () => setScrolled(window.scrollY > 300);
-      window.addEventListener('scroll', handleScroll);
-      return () => window.removeEventListener('scroll', handleScroll);
-    }
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        // If the 'about' section has entered the top threshold area of the screen
-        setScrolled(entry.boundingClientRect.top <= 80);
-      },
-      { 
-        threshold: 0, 
-        rootMargin: "-80px 0px 0px 0px" // Trigger right as the header area is reached
-      }
-    );
-
-    observer.observe(aboutSection);
-    return () => observer.disconnect();
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10);
+    };
+    window.addEventListener('scroll', handleScroll);
+    // Run once initially to set the correct state on load
+    handleScroll();
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const handleNavClick = (id) => {
@@ -37,7 +24,8 @@ const Navbar = ({ setActiveSection, onContactClick }) => {
 
   return (
     <nav
-      className={`fixed top-4 left-1/2 transform -translate-x-1/2 w-11/12 md:w-4/5 transition-all duration-500 rounded-full py-3 px-6 z-[9999]
+      className={`fixed top-4 left-1/2 transform -translate-x-1/2 w-11/12 md:w-4/5 transition-all duration-300 py-3 px-6 z-[9999]
+        ${mobileOpen ? 'rounded-[2rem]' : 'rounded-full'}
         ${scrolled 
           ? 'bg-blue-100/95 border border-[#1d77ba]/40 text-slate-800 shadow-xl backdrop-blur-md' 
           : 'bg-white/75 backdrop-blur-md border border-gray-200/30 text-gray-800 shadow-sm'
@@ -98,24 +86,24 @@ const Navbar = ({ setActiveSection, onContactClick }) => {
 
       {/* Mobile Menu */}
       {mobileOpen && (
-        <div className={`lg:hidden mt-4 rounded-lg shadow-lg py-4 px-6 flex flex-col space-y-4 border ${scrolled ? 'bg-white border-blue-150 text-slate-800' : 'bg-white border-gray-150 text-gray-800'}`}>
+        <div className="lg:hidden mt-4 pt-4 border-t border-gray-200/50 flex flex-col space-y-4">
           <a href="#services" onClick={() => setMobileOpen(false)} className="font-semibold hover:text-[#F15A29] text-gray-800">SERVICES</a>
           <a href="#products" onClick={() => setMobileOpen(false)} className="font-semibold hover:text-[#F15A29] text-gray-800">PRODUCTS</a>
           <a href="#trishield-edge" onClick={() => setMobileOpen(false)} className="font-semibold hover:text-[#F15A29] text-gray-800">THE TRISHIELD EDGE</a>
           <a href="#insights" onClick={() => setMobileOpen(false)} className="font-semibold hover:text-[#F15A29] text-gray-800">INSIGHTS</a>
           
-          <details>
-            <summary className="flex items-center gap-1 font-semibold cursor-pointer hover:text-[#F15A29] text-gray-800">
+          <details className="group">
+            <summary className="flex items-center gap-1 font-semibold cursor-pointer hover:text-[#F15A29] text-gray-800 list-none [&::-webkit-details-marker]:hidden">
               ABOUT US
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+              <svg className="w-4 h-4 transform group-open:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
               </svg>
             </summary>
-            <div className="flex flex-col pl-4 space-y-2 mt-2">
-              <button onClick={() => { handleNavClick("company"); setMobileOpen(false); }} className="text-left hover:text-[#F15A29] font-medium text-gray-700">ABOUT COMPANY</button>
-              <button onClick={() => { handleNavClick("values"); setMobileOpen(false); }} className="text-left hover:text-[#F15A29] font-medium text-gray-700">OUR VALUES</button>
-              <button onClick={() => { handleNavClick("mission"); setMobileOpen(false); }} className="text-left hover:text-[#F15A29] font-medium text-gray-700">OUR MISSION</button>
-              <button onClick={() => { handleNavClick("policies"); setMobileOpen(false); }} className="text-left hover:text-[#F15A29] font-medium text-gray-700">OUR POLICIES</button>
+            <div className="flex flex-col pl-4 space-y-2 mt-2 border-l-2 border-gray-200">
+              <button onClick={() => { handleNavClick("company"); setMobileOpen(false); }} className="text-left hover:text-[#F15A29] font-medium text-gray-600">ABOUT COMPANY</button>
+              <button onClick={() => { handleNavClick("values"); setMobileOpen(false); }} className="text-left hover:text-[#F15A29] font-medium text-gray-600">OUR VALUES</button>
+              <button onClick={() => { handleNavClick("mission"); setMobileOpen(false); }} className="text-left hover:text-[#F15A29] font-medium text-gray-600">OUR MISSION</button>
+              <button onClick={() => { handleNavClick("policies"); setMobileOpen(false); }} className="text-left hover:text-[#F15A29] font-medium text-gray-600">OUR POLICIES</button>
             </div>
           </details>
         </div>

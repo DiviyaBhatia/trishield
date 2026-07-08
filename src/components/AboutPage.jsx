@@ -80,29 +80,43 @@ const AboutPage = () => {
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
                   <div>
-                    <div className="flex items-center gap-2 mb-1.5">
-                      <span className="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
-                      <h4 className="text-sm font-bold text-gray-900 tracking-wider font-poppins">AVAILABLE</h4>
+                    <div className="flex items-center gap-3 mb-2.5">
+                      <div className="w-8 h-8 rounded-full bg-[#f15a27] flex items-center justify-center flex-shrink-0 shadow-sm">
+                        <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round">
+                          <circle cx="12" cy="7.5" r="3.5" />
+                          <path d="M12 21c-2.8 0-5-2.2-5-5s3-5.5 5-2c2-3.5 5-0.8 5 2s-2.2 5-5 5z" />
+                        </svg>
+                      </div>
+                      <h4 className="font-poppins font-light tracking-[0.25em] text-xs text-gray-900 uppercase">AVAILABLE</h4>
                     </div>
-                    <p className="text-xs text-gray-500 leading-relaxed">
+                    <p className="text-xs text-gray-500 leading-relaxed pl-11">
                       24/7/365 operational continuity and rapid assistance.
                     </p>
                   </div>
                   <div>
-                    <div className="flex items-center gap-2 mb-1.5">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#f15a27]"></span>
-                      <h4 className="text-sm font-bold text-gray-900 tracking-wider font-poppins">AGILE</h4>
+                    <div className="flex items-center gap-3 mb-2.5">
+                      <div className="w-8 h-8 rounded-full bg-[#1d77ba] flex items-center justify-center flex-shrink-0 shadow-sm">
+                        <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round">
+                          <path d="M13 2.5L6.5 13h5.5l-1 8.5L17.5 11h-5.5z" />
+                        </svg>
+                      </div>
+                      <h4 className="font-poppins font-light tracking-[0.25em] text-xs text-gray-900 uppercase">AGILE</h4>
                     </div>
-                    <p className="text-xs text-gray-500 leading-relaxed">
+                    <p className="text-xs text-gray-500 leading-relaxed pl-11">
                       Swift adaptivity and scaled resource allocation.
                     </p>
                   </div>
                   <div>
-                    <div className="flex items-center gap-2 mb-1.5">
-                      <span className="w-1.5 h-1.5 rounded-full bg-green-500"></span>
-                      <h4 className="text-sm font-bold text-gray-900 tracking-wider font-poppins">AHEAD</h4>
+                    <div className="flex items-center gap-3 mb-2.5">
+                      <div className="w-8 h-8 rounded-full bg-[#f15a27] flex items-center justify-center flex-shrink-0 shadow-sm">
+                        <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" strokeWidth="2.8" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round">
+                          <path d="M7 16c1.5-4 5-4.5 11-4.5" />
+                          <path d="M14 7.5l4 4-4 4" />
+                        </svg>
+                      </div>
+                      <h4 className="font-poppins font-light tracking-[0.25em] text-xs text-gray-900 uppercase">AHEAD</h4>
                     </div>
-                    <p className="text-xs text-gray-500 leading-relaxed">
+                    <p className="text-xs text-gray-500 leading-relaxed pl-11">
                       Proactive strategy and modern tool innovation.
                     </p>
                   </div>
@@ -110,7 +124,7 @@ const AboutPage = () => {
               </div>
             )}
           </div>
-          <div className="lg:order-2">
+          <div className="hidden lg:block lg:order-2">
             <div className="w-full h-96 bg-gray-200 rounded-2xl flex items-center justify-center overflow-hidden">
               <img
                 src={sections[activeSection].image}

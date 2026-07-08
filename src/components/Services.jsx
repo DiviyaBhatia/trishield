@@ -55,9 +55,9 @@ const Services = () => {
       )
     },
     {
-      title: "Managed PIM / PAM",
+      title: "Managed Security Services",
       desc: "Secure and manage privileged credentials, session monitoring, and access controls to prevent credential abuse and insider threats. Our team delivers comprehensive Privileged Identity & Access Management (PIM/PAM) solutions.",
-      highlights: ["Privileged Identity Management", "Session Monitoring & Recording", "Credential Vaulting", "Just-In-Time Access"],
+      highlights: ["Privileged Identity Management", "Session Monitoring & Recording", "Credential Vaulting", "Just-In-Time Access","Managed PIM / PAM"],
       colorClass: {
         bg: "bg-[#F3F3F1]"
       },
@@ -68,9 +68,9 @@ const Services = () => {
       )
     },
     {
-      title: "AI-Driven IT Operations",
+      title: "AI-Driven DevOps",
       desc: "Leverage artificial intelligence and machine learning to automate system monitoring, predict anomalies, and streamline IT workflows. We transform traditional DevOps into intelligent AIOps for resilient, self-healing systems.",
-      highlights: ["AIOps & Automation", "Predictive Analytics", "Continuous Delivery", "Intelligent Monitoring"],
+      highlights: ["AI-Driven IT Operations", "AIOps & Automation", "Predictive Analytics", "Continuous Delivery", "Intelligent Monitoring"],
       colorClass: {
         bg: "bg-[#EAEAEA]"
       },
@@ -90,7 +90,7 @@ const Services = () => {
             WHAT WE DO
           </p>
         </div>
-        <h2 className="text-[56px] md:text-6xl font-bold leading-tight mb-20 mt-4 font-poppins tracking-tight max-w-4xl mx-auto text-center text-gray-900">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-12 md:mb-20 mt-4 font-poppins tracking-tight max-w-4xl mx-auto text-center text-gray-900">
           Explore Our Comprehensive Range of{' '}
           <span className="text-[#1d77ba] font-normal">Innovative Services</span>{' '}
           Tailored for You

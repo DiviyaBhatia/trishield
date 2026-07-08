@@ -16,47 +16,52 @@ export default function HomePage() {
 
   return (
     <div className="overflow-x-clip bg-white text-black">
-    {/* Navbar at the very top, outside hero */}
-    <Navbar onContactClick={() => setIsContactOpen(true)} />
+      {/* Navbar at the very top, outside hero */}
+      <Navbar onContactClick={() => setIsContactOpen(true)} />
 
-    {/* Hero Section with Background */}
-    <div 
-      className="relative min-h-screen w-full"
-      style={{
-        backgroundImage: 'url("/bg3.png")',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat'
-      }}
-    > 
-      <div className="absolute inset-0 bg-white opacity-60"></div>
-      
-      <div className="relative pt-24 z-10">
-        <Hero onContactClick={() => setIsContactOpen(true)} />
+      {/* Hero Section with Background */}
+      <div
+        className="relative min-h-screen w-full"
+        style={{
+          backgroundImage: 'url("/bg-final.png")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
+        <div className="absolute inset-0 bg-white opacity-60"></div>
+
+        <div className="relative pt-24 z-10">
+          <Hero onContactClick={() => setIsContactOpen(true)} />
+        </div>
       </div>
-    </div>
 
-    {/* Other Sections */}
-    <div id="about" >
-      <AboutPage />
-    </div>
-    <div id="services">
-      <Services />
-    </div>
-    
-    <div id="trishield-edge" className="bg-gray-50/30">
-      <TrishieldEdge />
-    </div>
-    
-    <div id="blog">
-      <Blog />
-    </div>
-    
-    <div id="contact">
-      <Contact onContactClick={() => setIsContactOpen(true)} />
-    </div>
+      {/* Other Sections */}
+      <div id="services">
+        <Services />
+      </div>
 
-    <ContactModal isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
-  </div>
+      <div id="products">
+        {/* Kept empty for now */}
+      </div>
+
+      <div id="trishield-edge" className="bg-gray-50/30">
+        <TrishieldEdge />
+      </div>
+
+      <div id="insights">
+        <Blog />
+      </div>
+
+      <div id="about">
+        <AboutPage />
+      </div>
+
+      <div id="contact">
+        <Contact onContactClick={() => setIsContactOpen(true)} />
+      </div>
+
+      <ContactModal isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
+    </div>
   );
 }
