@@ -1,10 +1,11 @@
 "use client";
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 const Navbar = ({ setActiveSection, onContactClick }) => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [aboutOpen, setAboutOpen] = useState(false);
+  const navRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,6 +17,31 @@ const Navbar = ({ setActiveSection, onContactClick }) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Close the About dropdown / mobile menu on outside click or Escape
+  useEffect(() => {
+    if (!aboutOpen && !mobileOpen) return;
+
+    const handleClickOutside = (e) => {
+      if (navRef.current && !navRef.current.contains(e.target)) {
+        setAboutOpen(false);
+        setMobileOpen(false);
+      }
+    };
+    const handleEscape = (e) => {
+      if (e.key === 'Escape') {
+        setAboutOpen(false);
+        setMobileOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener('keydown', handleEscape);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('keydown', handleEscape);
+    };
+  }, [aboutOpen, mobileOpen]);
+
   const handleNavClick = (id) => {
     if (setActiveSection) setActiveSection(id);
     const section = document.getElementById("active-section");
@@ -24,6 +50,7 @@ const Navbar = ({ setActiveSection, onContactClick }) => {
 
   return (
     <nav
+      ref={navRef}
       className={`fixed top-4 left-1/2 transform -translate-x-1/2 w-11/12 md:w-4/5 transition-all duration-300 py-3 px-6 z-[9999]
         ${mobileOpen ? 'rounded-[2rem]' : 'rounded-full'}
         ${scrolled 

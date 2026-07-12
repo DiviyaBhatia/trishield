@@ -56,7 +56,7 @@ const AboutPage = () => {
 
       {/* Header */}
       <div className="pt-32 pb-8 px-8 text-center">
-        <p className="inline-block px-4 py-2 border mb-10 border-gray-300 rounded-full text-sm text-gray-500 uppercase tracking-wide bg-transparent">
+        <p className="inline-block px-4 py-2 border mb-10 border-[#1d77ba]/30 rounded-full text-sm font-bold text-[#1d77ba] uppercase tracking-wide bg-transparent">
           About Us
         </p>
       </div>

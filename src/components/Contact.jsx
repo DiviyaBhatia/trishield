@@ -15,7 +15,7 @@ const Contact = ({ onContactClick }) => {
           <p className="text-sm text-gray-100 mb-4 uppercase tracking-wide">Contact Us</p>
 
           <h2 className="text-5xl md:text-6xl font-bold text-black mb-6 leading-tight font-poppins tracking-tight">
-            How Can We Help You
+            How We Can Help You
           </h2>
 
           <p className="text-lg text-gray-500 mb-12 max-w-2xl mx-auto">
@@ -88,7 +88,7 @@ const Contact = ({ onContactClick }) => {
               <a href="/" className="block text-gray-600 hover:text-gray-900 transition-colors">
                 Homepage
               </a>
-              <a href="/contact" className="block text-gray-600 hover:text-gray-900 transition-colors">
+              <a href="#contact" className="block text-gray-600 hover:text-gray-900 transition-colors">
                 Contact
               </a>
               <a href="/terms" className="block text-gray-600 hover:text-gray-900 transition-colors">

@@ -23,41 +23,39 @@ export default function HomePage() {
       <div
         className="relative min-h-screen w-full"
         style={{
-          backgroundImage: 'url("/bg-final.png")',
+          backgroundImage: 'url("/new-bg.png")',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat'
         }}
       >
-        <div className="absolute inset-0 bg-white opacity-60"></div>
-
         <div className="relative pt-24 z-10">
           <Hero onContactClick={() => setIsContactOpen(true)} />
         </div>
       </div>
 
       {/* Other Sections */}
-      <div id="services">
+      <div id="services" className="scroll-mt-32">
         <Services />
       </div>
 
-      <div id="products">
+      <div id="products" className="scroll-mt-32">
         {/* Kept empty for now */}
       </div>
 
-      <div id="trishield-edge" className="bg-gray-50/30">
+      <div id="trishield-edge" className="bg-gray-50/30 scroll-mt-32">
         <TrishieldEdge />
       </div>
 
-      <div id="insights">
+      <div id="insights" className="scroll-mt-32">
         <Blog />
       </div>
 
-      <div id="about">
+      <div id="about" className="scroll-mt-32">
         <AboutPage />
       </div>
 
-      <div id="contact">
+      <div id="contact" className="scroll-mt-32">
         <Contact onContactClick={() => setIsContactOpen(true)} />
       </div>
 

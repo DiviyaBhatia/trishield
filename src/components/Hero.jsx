@@ -5,16 +5,16 @@ const Hero = ({ onContactClick }) => {
       <div className="absolute top-1/4 left-1/4 w-[350px] h-[350px] rounded-full bg-blue-400/10 mix-blend-multiply filter blur-3xl opacity-60 animate-pulseGlow pointer-events-none"></div>
       <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] rounded-full bg-[#f15a27]/10 mix-blend-multiply filter blur-3xl opacity-50 animate-pulseGlow pointer-events-none"></div>
 
-      <div className="relative z-10 max-w-4xl mx-auto flex flex-col items-center justify-center">
-        <h1 className="text-[72px] md:text-7xl font-thin leading-tight mb-8">
+      <div className="relative z-10 max-w-3xl mx-auto flex flex-col items-center justify-center">
+        <h1 className="text-[44px] md:text-6xl font-thin leading-tight mb-8">
           Unlock Your Potential with <br /><span className="text-[#1d77ba] font-semibold">Our Solutions</span>
         </h1>
 
         <p
-          className="text-lg md:text-xl max-w-2xl text-gray-600 mb-12 leading-relaxed animate-fadeInUp"
+          className="text-base md:text-lg max-w-lg text-gray-600 mb-12 leading-relaxed animate-fadeInUp"
           style={{ animationDelay: '400ms' }}
         >
-          Transform your business with innovative strategies designed for growth. Join us on a journey to success.
+          Transform your business with innovative strategies designed for growth. From managed infrastructure to delivering the full spectrum of technology services needed by your business to thrive.<br/> Join us on a journey to success.
         </p>
 
         <div

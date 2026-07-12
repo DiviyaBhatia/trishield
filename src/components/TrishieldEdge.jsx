@@ -48,8 +48,8 @@ const TrishieldEdge = () => {
 
   const advantages = [
     {
-      title: "24/7/365 Protection",
-      desc: "Our NOC and SOC keep watch round-the-clock to detect anomalies and keep your services live."
+      title: "A True Extension of Your Team",
+      desc: "You get a dedicated point of contact, ongoing support, and a partner who's as invested in your success as you are."
     },
     {
       title: "Industry Experts Only",
@@ -86,7 +86,7 @@ const TrishieldEdge = () => {
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
       }`}
     >
-      <p className="inline-block px-4 py-2 border border-gray-300 rounded-full text-sm text-gray-500 uppercase tracking-wide bg-transparent font-poppins">
+      <p className="inline-block px-4 py-2 border border-[#1d77ba]/30 rounded-full text-sm font-bold text-[#1d77ba] uppercase tracking-wide bg-transparent font-poppins">
         Why Choose Us
       </p>
       

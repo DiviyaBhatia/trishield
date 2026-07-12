@@ -1,9 +1,10 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const Blog = () => {
   const [activeSlide, setActiveSlide] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const [isPaused, setIsPaused] = useState(false);
 
   const blogs = [
     {
@@ -69,6 +70,20 @@ const Blog = () => {
       setIsTransitioning(false);
     }, 350);
   };
+
+  // Keep a live reference to handleNext so the interval always calls the latest
+  // version (with the current isTransitioning check) without needing to tear down
+  // and restart the timer on every render.
+  const handleNextRef = useRef(handleNext);
+  handleNextRef.current = handleNext;
+
+  useEffect(() => {
+    if (isPaused) return;
+    const interval = setInterval(() => handleNextRef.current(), 5000);
+    return () => clearInterval(interval);
+    // Restarts the countdown after any slide change (auto or manual) so the pacing
+    // between transitions stays consistent either way.
+  }, [isPaused, activeSlide]);
 
   // Helper to calculate card layout styles in the stack
   const getCardStyle = (index) => {
@@ -142,13 +157,17 @@ const Blog = () => {
 
       <div className="relative z-10 w-full max-w-7xl mx-auto flex flex-col items-center">
         {/* Title Tag */}
-        <p className="inline-block px-4 py-2 border border-white/30 rounded-full text-sm text-white uppercase tracking-wide bg-white/10 mb-12 font-poppins">
+        <p className="inline-block px-4 py-2 border border-white/60 rounded-full text-sm font-bold text-white uppercase tracking-wide bg-white/20 mb-12 font-poppins">
           Latest Insights
         </p>
 
         {/* Featured Slider Card Wrapper */}
-        <div className="relative w-full max-w-4xl flex items-center justify-center py-6">
-          
+        <div
+          className="relative w-full max-w-4xl flex items-center justify-center py-6"
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+        >
+
           {/* Navigation Arrows */}
           <button
             onClick={handlePrev}
@@ -198,6 +217,7 @@ const Blog = () => {
 
                     <a
                       href="#"
+                      onClick={(e) => e.preventDefault()}
                       className="inline-flex items-center gap-2 font-bold text-gray-950 hover:text-[#f15a27] transition-colors group font-poppins mt-auto text-sm"
                     >
                       Read Article
