@@ -7,7 +7,7 @@ const Hero = ({ onContactClick }) => {
 
       <div className="relative z-10 max-w-3xl mx-auto flex flex-col items-center justify-center">
         <h1 className="text-[44px] md:text-6xl font-thin leading-tight mb-8">
-          Unlock Your Potential with <br /><span className="text-[#1d77ba] font-semibold">Our Solutions</span>
+          Your Global Partner <br /><span className="text-[#1d77ba] font-semibold">For IT Solutions</span>
         </h1>
 
         <p
