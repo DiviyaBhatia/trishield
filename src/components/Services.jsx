@@ -9,7 +9,7 @@ const Services = () => {
     {
       title: "Managed Services",
       desc: "Our Managed Services practice takes on the day-to-day operational burden of your IT environment. We combine skilled engineers with purpose-built tooling to deliver consistent, measurable outcomes - reducing downtime, lowering costs, and improving service quality.",
-      highlights: ["Unified Endpoint Management (UEM)", "Managed NOC", "Network Security Management", "Virtual Infrastructure", "System Administration", "Multi-Cloud Management"],
+      highlights: ["Unified Endpoint Management (UEM)", "Managed NOC", "Network Security Management", "Virtual Infrastructure Management", "System Administration", "Multi-Cloud Management"],
       colorClass: {
         bg: "bg-[#F3F3F1]"
       },

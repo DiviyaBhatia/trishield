@@ -52,12 +52,12 @@ const TrishieldEdge = () => {
       desc: "You get a dedicated point of contact, ongoing support, and a partner who's as invested in your success as you are."
     },
     {
-      title: "Industry Experts Only",
-      desc: "Access certified security consultants and senior architects who understand compliance and scale."
+      title: "Accountable operations",
+      desc: "We take ownership to the heart. Every aspect of your technology backbone is our responsibility."
     },
     {
-      title: "Guaranteed SLA Response",
-      desc: "Fast, response-time guarantees for critical events so your operations are never left hanging."
+      title: "Dedicated R&D Team",
+      desc: "Our team is always reviewing and testing new technologies that would help your business stay ahead."
     }
   ];
 

@@ -5,12 +5,12 @@ const Why = () => {
       desc: "Our NOC and SOC keep watch round-the-clock to detect anomalies and keep your services live."
     },
     {
-      title: "Industry Experts Only",
-      desc: "Access certified security consultants and senior architects who understand compliance and scale."
+      title: "Accountable operations",
+      desc: "We take ownership to the heart. Every aspect of your technology backbone is our responsibility."
     },
     {
-      title: "Guaranteed SLA Response",
-      desc: "Fast, response-time guarantees for critical events so your operations are never left hanging."
+      title: "Dedicated R&D Team",
+      desc: "Our team is always reviewing and testing new technologies that would help your business stay ahead."
     }
   ];
 
